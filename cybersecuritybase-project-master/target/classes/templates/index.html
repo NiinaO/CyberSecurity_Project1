@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+
+        <h1>Welcome to the most secure page even! </h1>
+
+        <!-- TÄHÄN listan tulostus! käyttäjän nimi + linkki ilmoittautumiseen (näyttää osoitteen) -->
+        <p th:each="name : ${list}">
+            <span th:text="${name}">Attendees</span>
+        </p>
+        
+        <p></p>
+        <form method="GET" action="/login">
+        <button type="submit">Log In</button>
+        </form>
+        <p></p>
+        <form method="GET" action="/form">
+        <button type="submit">Sign up to the event</button>
+        </form>
+
+        <p></p>
+    </body>
+</html>
